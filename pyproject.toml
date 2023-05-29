@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "tokenchecker"
+version = "0.1.0"
+description = ""
+authors = ["Jarco van Roest <jarco@elnino.tech>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+tiktoken = "^0.3.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
