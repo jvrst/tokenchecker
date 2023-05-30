@@ -1,6 +1,7 @@
 import argparse
 import tiktoken
 from dataclasses import dataclass
+import os
 
 
 @dataclass
@@ -26,7 +27,7 @@ def main(args: Args):
         file.close()
     except FileNotFoundError:
         print("File not found")
-        exit(1)
+        exit(os.EX_CONFIG)
 
     encoding = tiktoken.encoding_for_model(model)
     print(num_tokens_from_string(file_text, encoding))
